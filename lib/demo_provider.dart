@@ -6,10 +6,10 @@ part 'demo_provider.g.dart';
 
 @riverpod
 Future<DemoEntity> demoHttp(DemoHttpRef ref) async {
-  final response = await http.get(
-    Uri.https('www.google.com', '/api/test'),
-  );
-  print(response.body);
+  // final response = await http.get(
+  //   Uri.https('www.google.com', '/api/test'),
+  // );
+  // print(response.body);
   await Future.delayed(const Duration(seconds: 2));
   final jsonStr =
       '{"activity": "${DateTime.now().toIso8601String()}", "type": "type_demo", "participants": 1, "price": 1001.1}';
